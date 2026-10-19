@@ -17,6 +17,7 @@
   <div class="wrap nav">
     <a class="logo" href="#top">First<span>Car</span>Finder</a>
     <nav class="nav-links" aria-label="Primary">
+      <a href="#spotlight">Spotlight</a>
       <a href="#finder">Find Your Car</a>
       <a href="#compare">Compare</a>
       <a href="#vin">VIN Check</a>
@@ -50,6 +51,18 @@
         <img src="assets/hero.jpg" alt="A car on the road at dusk" />
         <div class="hero-badge">Starting MSRP from <b id="stat-lowest">–</b> in Canada</div>
       </div>
+    </div>
+  </section>
+
+  <!-- SPOTLIGHT PICKS -->
+  <section class="block" id="spotlight" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">Start here</span>
+      <h2 class="section-title">Not sure where to start? Spotlight picks</h2>
+      <p class="section-sub">Three award-winning picks from our 17 real 2026 cars — lowest price, best fuel economy, longest warranty and more. The picks rotate every 30 minutes, and each card adds live data: the Bank of Canada's current prime rate (for a payment estimate) and the NHTSA recall record for that model.</p>
+      <p class="spotlight-status" id="spotlight-status" aria-live="polite"></p>
+      <div class="car-grid" id="spotlight-grid"></div>
+      <p class="spotlight-note">Payment estimates assume 10% down over 60 months at the current Bank of Canada prime rate + 2% — an estimate only; dealer rates differ. Recall counts come from the live NHTSA database and cover U.S. campaigns for that model year.</p>
     </div>
   </section>
 
@@ -206,6 +219,21 @@
 
 <div class="toast" id="toast"></div>
 
+<!-- ASK CHAT WIDGET -->
+<button class="ask-fab" id="ask-toggle" aria-expanded="false" aria-controls="ask-panel">💬 Ask</button>
+<div class="ask-panel" id="ask-panel" role="dialog" aria-label="Ask the FirstCarFinder assistant" hidden>
+  <div class="ask-head">
+    <b id="ask-title">Ask AI Assistant</b>
+    <button class="ask-close" id="ask-close" aria-label="Close chat">✕</button>
+  </div>
+  <div class="ask-messages" id="ask-messages"></div>
+  <form class="ask-form" id="ask-form">
+    <input id="ask-input" maxlength="500" placeholder="Ask about a car…" aria-label="Your question" autocomplete="off" />
+    <button class="btn small" type="submit" id="ask-send">Send</button>
+  </form>
+  <p class="ask-powered" id="ask-powered">AI assistant for FirstCarFinder</p>
+</div>
+
 <footer>
   <div class="wrap">
     <div><b style="color:var(--ink)">FirstCarFinder</b> — a course project framework for first-time car buyers in Canada.</div>
@@ -235,5 +263,7 @@
 
 <script src="js/vin.js"></script>
 <script src="js/app.js"></script>
+<script src="js/spotlight.js"></script>
+<script src="js/ask.js"></script>
 </body>
 </html>
