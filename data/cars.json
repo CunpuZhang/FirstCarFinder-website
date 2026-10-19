@@ -1,0 +1,629 @@
+{
+  "cars": [
+    {
+      "bodyStyle": "sedan",
+      "cargoL": 371,
+      "cons": [
+        "Smallest cargo volume of the sedans at 371 L"
+      ],
+      "drivetrain": "FWD",
+      "features": [],
+      "fuelCityL100km": 7.4,
+      "fuelHwyL100km": 5.7,
+      "id": "toyota-corolla",
+      "image": "assets/corolla.jpg",
+      "make": "Toyota",
+      "model": "Corolla",
+      "msrpCAD": 24520,
+      "msrpSource": "Toyota Canada press release 'What's new: The 2026 Toyota Corolla' pricing table",
+      "officialUrl": "https://www.toyota.ca/corolla",
+      "powertrain": "gas",
+      "pros": [
+        "Lowest starting MSRP of the sedans at $24,520",
+        "Lowest highway fuel economy of the sedans (5.7 L/100km)"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "L",
+      "year": 2026,
+      "warrantyYears": 3,
+      "warrantyKm": 60000
+    },
+    {
+      "bodyStyle": "sedan",
+      "cargoL": 413,
+      "cons": [
+        "FWD only — no AWD option"
+      ],
+      "drivetrain": "FWD",
+      "features": [
+        "Wireless Apple CarPlay / Android Auto",
+        "5-yr/100,000 km warranty"
+      ],
+      "fuelCityL100km": 8.0,
+      "fuelHwyL100km": 6.0,
+      "id": "kia-k4",
+      "image": "assets/k4.jpg",
+      "make": "Kia",
+      "model": "K4",
+      "msrpCAD": 24295,
+      "msrpSource": "Kia Canada Dec 2025 pricing announcement (excludes freight/PDI, fees, taxes)",
+      "officialUrl": "https://www.kia.ca/",
+      "powertrain": "gas",
+      "pros": [
+        "5-year/100,000 km comprehensive warranty — longest coverage in the group",
+        "Wireless Apple CarPlay and Android Auto standard even on base LX"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "LX",
+      "year": 2026,
+      "warrantyYears": 5,
+      "warrantyKm": 100000
+    },
+    {
+      "bodyStyle": "sedan",
+      "cargoL": 374,
+      "cons": [
+        "Highest city fuel economy of the sedans at 8.8 L/100km"
+      ],
+      "drivetrain": "FWD",
+      "features": [
+        "186 hp 2.5L SKYACTIV-G",
+        "Unlimited-km warranty"
+      ],
+      "fuelCityL100km": 8.8,
+      "fuelHwyL100km": 6.6,
+      "id": "mazda3",
+      "image": "assets/mazda3.jpg",
+      "make": "Mazda",
+      "model": "Mazda3",
+      "msrpCAD": 25250,
+      "msrpSource": "Mazda Canada press release '2026 Mazda3: Pricing and Packaging'",
+      "officialUrl": "https://www.mazda.ca/en/vehicles/Mazda3/",
+      "powertrain": "gas",
+      "pros": [
+        "Most powerful base engine of the sedans: 186 hp 2.5L SKYACTIV-G",
+        "Mazda Unlimited warranty — no mileage limit on 3-yr new vehicle / 5-yr powertrain"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "GX",
+      "year": 2026,
+      "warrantyYears": 3,
+      "warrantyKm": null
+    },
+    {
+      "bodyStyle": "sedan",
+      "cargoL": 402,
+      "cons": [
+        "Rear seat folds as one piece — no 60/40 split"
+      ],
+      "drivetrain": "FWD",
+      "features": [],
+      "fuelCityL100km": 7.5,
+      "fuelHwyL100km": 5.9,
+      "id": "hyundai-elantra",
+      "image": "assets/elantra.jpg",
+      "make": "Hyundai",
+      "model": "Elantra",
+      "msrpCAD": 25399,
+      "msrpNote": "Hyundai Canada MSRP includes destination & handling",
+      "msrpSource": "Official Hyundai Canada Shop pages: 'Starting $25,399 MSRP*' (Essential)",
+      "officialUrl": "https://hyundaicanada.com/en/showroom/elantra",
+      "powertrain": "gas",
+      "pros": [
+        "Second-largest sedan cargo volume at 402 L",
+        "Low 7.5 L/100km city fuel economy"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "Essential",
+      "year": 2026,
+      "warrantyYears": 5,
+      "warrantyKm": 100000
+    },
+    {
+      "bodyStyle": "sedan",
+      "cargoL": 399,
+      "cons": [
+        "4-year/80,000 km basic warranty — shorter than Korean rivals' 5-year plans"
+      ],
+      "drivetrain": "FWD",
+      "features": [
+        "1.5L turbo (158 hp)"
+      ],
+      "fuelCityL100km": 8.2,
+      "fuelHwyL100km": 5.9,
+      "id": "volkswagen-jetta",
+      "image": "assets/jetta.jpg",
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "msrpCAD": 27495,
+      "msrpSource": "2026 Jetta Trendline itemized dealer listings; vw.ca 2026 Jetta page verified",
+      "officialUrl": "https://www.vw.ca/en/models/new-vehicles/2026-jetta.html",
+      "powertrain": "gas",
+      "pros": [
+        "1.5L turbo with 158 hp and 184 lb-ft of torque",
+        "5.9 L/100km highway — lowest highway figure in the group"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "Trendline",
+      "year": 2026,
+      "warrantyYears": 4,
+      "warrantyKm": 80000
+    },
+    {
+      "bodyStyle": "sedan",
+      "cargoL": 419,
+      "cons": [
+        "Highest sedan starting MSRP at $28,440"
+      ],
+      "drivetrain": "FWD",
+      "features": [
+        "Multi-link rear suspension"
+      ],
+      "fuelCityL100km": 7.4,
+      "fuelHwyL100km": 5.8,
+      "id": "honda-civic",
+      "image": "assets/civic.jpg",
+      "make": "Honda",
+      "model": "Civic",
+      "msrpCAD": 28440,
+      "msrpSource": "Honda Canada dealer inventory listings quoting 2026 Civic Sedan MSRP from $28,440",
+      "officialUrl": "https://www.honda.ca/en/civic_sedan",
+      "powertrain": "gas",
+      "pros": [
+        "Largest sedan trunk at 419 L",
+        "Independent multi-link rear suspension"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "LX",
+      "year": 2026,
+      "warrantyYears": 3,
+      "warrantyKm": 60000
+    },
+    {
+      "bodyStyle": "suv",
+      "cargoL": 722,
+      "cons": [
+        "Base trim is FWD; AWD costs about $2,000 more"
+      ],
+      "drivetrain": "FWD",
+      "features": [
+        "5-yr/100,000 km warranty"
+      ],
+      "fuelCityL100km": 8.1,
+      "fuelHwyL100km": 6.8,
+      "id": "hyundai-kona",
+      "image": "assets/kona.jpg",
+      "make": "Hyundai",
+      "model": "Kona",
+      "msrpCAD": 26749,
+      "msrpSource": "AutoTrader.ca 2026 Kona research page (Hyundai Canada-based data)",
+      "officialUrl": "https://hyundaicanada.com/en/showroom/kona",
+      "powertrain": "gas",
+      "pros": [
+        "722 L of cargo — the most in the group",
+        "5-year/100,000 km comprehensive warranty"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "Essential",
+      "year": 2026,
+      "warrantyYears": 5,
+      "warrantyKm": 100000
+    },
+    {
+      "bodyStyle": "suv",
+      "cargoL": 609,
+      "cons": [
+        "Base L trim omits blind-spot monitoring and smart keyless entry"
+      ],
+      "drivetrain": "FWD",
+      "features": [
+        "Toyota Safety Sense 3.0"
+      ],
+      "fuelCityL100km": 7.6,
+      "fuelHwyL100km": 7.2,
+      "id": "toyota-corolla-cross",
+      "image": "assets/corolla-cross.jpg",
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "msrpCAD": 28830,
+      "msrpSource": "Toyota dealer build tools; shoptoyota.ca official shop site verified",
+      "officialUrl": "https://www.shoptoyota.ca/ontario/en/2026/corolla/corolla-cross-l-fwd",
+      "powertrain": "gas",
+      "pros": [
+        "Toyota Safety Sense 3.0 driver-assist suite standard",
+        "169 hp 2.0L with 7.6/7.2 L/100km — strong efficiency for an SUV"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "L (FWD)",
+      "year": 2026,
+      "warrantyYears": 3,
+      "warrantyKm": 60000
+    },
+    {
+      "bodyStyle": "suv",
+      "cargoL": 691,
+      "cons": [
+        "Modest 158 hp engine; 9.1/7.4 L/100km trails subcompact-SUV rivals"
+      ],
+      "drivetrain": "FWD",
+      "features": [
+        "Honda Sensing standard"
+      ],
+      "fuelCityL100km": 9.1,
+      "fuelHwyL100km": 7.4,
+      "id": "honda-hr-v",
+      "image": "assets/hr-v.jpg",
+      "make": "Honda",
+      "model": "HR-V",
+      "msrpCAD": 30300,
+      "msrpSource": "hondanews.ca (Honda Canada official press site), 2026 HR-V pricing release",
+      "officialUrl": "https://www.honda.ca/en/hrv",
+      "powertrain": "gas",
+      "pros": [
+        "Honda Sensing safety suite standard on all trims",
+        "691 L cargo, expanding to 1,560 L with seats folded"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "LX (FWD)",
+      "year": 2026,
+      "warrantyYears": 3,
+      "warrantyKm": 60000
+    },
+    {
+      "bodyStyle": "suv",
+      "cargoL": 564,
+      "cons": [
+        "Highest starting price in the group at $30,595"
+      ],
+      "drivetrain": "AWD",
+      "features": [
+        "Standard full-time AWD",
+        "180 hp 2.5L BOXER"
+      ],
+      "fuelCityL100km": 9.0,
+      "fuelHwyL100km": 7.1,
+      "id": "subaru-crosstrek",
+      "image": "assets/crosstrek.jpg",
+      "make": "Subaru",
+      "model": "Crosstrek",
+      "msrpCAD": 30595,
+      "msrpSource": "subaru.ca 2026 Crosstrek pricing data; Subaru Canada Oct 2025 pricing release",
+      "officialUrl": "https://www.subaru.ca/",
+      "powertrain": "gas",
+      "pros": [
+        "Standard full-time Symmetrical AWD — winter confidence built in",
+        "180 hp 2.5L BOXER — most powerful base engine in the group"
+      ],
+      "rangeKm": null,
+      "seats": 5,
+      "trim": "Convenience",
+      "year": 2026,
+      "warrantyYears": 3,
+      "warrantyKm": 60000
+    },
+    {
+      "bodyStyle": "sedan",
+      "cargoL": 425,
+      "cons": [
+        "Highest starting price in the group at $39,490",
+        "Built in China — does not qualify for the federal EV rebate"
+      ],
+      "drivetrain": "RWD",
+      "features": [
+        "Tesla Supercharger access",
+        "463 km range"
+      ],
+      "fuelCityL100km": null,
+      "fuelHwyL100km": null,
+      "id": "tesla-model-3",
+      "image": "assets/model3.jpg",
+      "make": "Tesla",
+      "model": "Model 3",
+      "msrpCAD": 39490,
+      "msrpSource": "Canadian EV press (Electrek, iPhone in Canada) reporting Tesla Canada pricing, May–Jun 2026",
+      "officialUrl": "https://www.tesla.com/en_ca/model3",
+      "powertrain": "electric",
+      "pros": [
+        "463 km range — genuine road-trip capability",
+        "Lowest running costs: no gas, cheap home charging"
+      ],
+      "rangeKm": 463,
+      "seats": 5,
+      "trim": "Premium RWD",
+      "year": 2026,
+      "warrantyYears": 4,
+      "warrantyKm": 80000
+    },
+    {
+      "id": "honda-civic-hatch",
+      "make": "Honda",
+      "model": "Civic Hatchback",
+      "trim": "Sport",
+      "year": 2026,
+      "bodyStyle": "hatchback",
+      "seats": 5,
+      "powertrain": "gas",
+      "drivetrain": "FWD",
+      "msrpCAD": 32300,
+      "msrpNote": "before freight/PDI/fees/tax",
+      "fuelCityL100km": 7.7,
+      "fuelHwyL100km": 6.1,
+      "cargoL": 694,
+      "warrantyYears": 3,
+      "warrantyKm": 60000,
+      "pros": [
+        "Class-leading 694 L of cargo space with 60/40 split-folding rear seats",
+        "Strong fuel economy for a non-hybrid: 7.7/6.1 L/100km city/highway",
+        "Full Honda Sensing safety suite and heated front seats standard on every trim"
+      ],
+      "cons": [
+        "Priciest entry point of the hatchbacks at $32,300 MSRP",
+        "Modest 150 hp from the 2.0L — adequate but not exciting",
+        "CVT only; no manual transmission offered anymore"
+      ],
+      "features": [
+        "18-inch aluminum-alloy wheels",
+        "7-inch touchscreen with wired Apple CarPlay and Android Auto",
+        "Heated front seats",
+        "Honda Sensing suite (collision mitigation braking, adaptive cruise, lane keeping assist)",
+        "Dual-zone automatic climate control",
+        "60/40 split-folding rear seatback"
+      ],
+      "image": "assets/civic-hatch.jpg",
+      "officialUrl": "https://www.honda.ca/en/civic_hatchback",
+      "msrpSource": "Number 7 Honda (Woodbridge, ON) new-inventory listing: 'MSRP starting at $32,300' for the 2026 Civic Hatchback Sport; cross-checked vs autoTRADER.ca editorial"
+    },
+    {
+      "id": "mazda3-sport",
+      "make": "Mazda",
+      "model": "Mazda3 Sport",
+      "trim": "GX",
+      "year": 2026,
+      "bodyStyle": "hatchback",
+      "seats": 5,
+      "powertrain": "gas",
+      "drivetrain": "FWD",
+      "msrpCAD": 26000,
+      "msrpNote": "before freight/PDI/fees/tax",
+      "fuelCityL100km": 8.9,
+      "fuelHwyL100km": 6.8,
+      "cargoL": 569,
+      "warrantyYears": 3,
+      "warrantyKm": null,
+      "pros": [
+        "Punchy 2.5L engine — the strongest base engine among the hatchbacks",
+        "Mazda Unlimited warranty: 3-year new-vehicle coverage with unlimited kilometres, unique in Canada",
+        "Premium-feeling cabin and sharp handling for a $26,000 car"
+      ],
+      "cons": [
+        "Thirstiest of the compact hatchbacks at 8.9/6.8 L/100km",
+        "Torsion-beam rear suspension — less refined over rough roads",
+        "569 L cargo hold is the smallest of the hatchbacks here"
+      ],
+      "features": [
+        "16-inch alloy wheels",
+        "8.8-inch Mazda Connect display with Apple CarPlay and Android Auto",
+        "Heated front seats",
+        "Blind Spot Monitoring with Rear Cross Traffic Alert",
+        "Mazda Radar Cruise Control and Smart Brake Support",
+        "LED headlights with automatic high beams"
+      ],
+      "image": "assets/mazda3-sport.jpg",
+      "officialUrl": "https://www.mazda.ca/en/vehicles/mazda3-sport/",
+      "msrpSource": "Yorkdale Dufferin Mazda itemized price disclosure for the 2026 Mazda3 Sport GX: MSRP $26,000.00"
+    },
+    {
+      "id": "toyota-gr86",
+      "make": "Toyota",
+      "model": "GR86",
+      "trim": "Base",
+      "year": 2026,
+      "bodyStyle": "coupe",
+      "seats": 4,
+      "powertrain": "gas",
+      "drivetrain": "RWD",
+      "msrpCAD": 32895,
+      "msrpNote": "before freight/PDI/fees/tax",
+      "fuelCityL100km": 12.0,
+      "fuelHwyL100km": 8.9,
+      "cargoL": 178,
+      "warrantyYears": 3,
+      "warrantyKm": 60000,
+      "pros": [
+        "The only rear-wheel-drive sports coupe near $33k — Torsen limited-slip differential and 228 hp boxer engine standard",
+        "6-speed manual available on the base trim",
+        "Toyota reliability reputation in a track-capable package"
+      ],
+      "cons": [
+        "Requires premium gasoline",
+        "Thirsty for its size: 12.0/8.9 L/100km with the manual",
+        "Barely-usable rear seats and a 178 L trunk; tire repair kit instead of a spare"
+      ],
+      "features": [
+        "17-inch alloy wheels with 215/45R17 tires",
+        "Torsen limited-slip differential",
+        "8-inch touchscreen with Apple CarPlay/Android Auto and 6-speaker audio",
+        "LED headlamps",
+        "Fabric sport seats and leather-wrapped tilt/telescopic steering wheel",
+        "7-inch TFT instrument display and backup camera"
+      ],
+      "image": "assets/gr86.jpg",
+      "officialUrl": "https://www.toyota.ca/en/vehicles/gr86",
+      "msrpSource": "Toyota dealer build-and-price tools (Crown Toyota Winnipeg, Candiac Toyota): Base MSRP $32,895; corroborated by autoTRADER.ca"
+    },
+    {
+      "id": "toyota-corolla-hybrid",
+      "make": "Toyota",
+      "model": "Corolla Hybrid",
+      "trim": "LE",
+      "year": 2026,
+      "bodyStyle": "sedan",
+      "seats": 5,
+      "powertrain": "hybrid",
+      "drivetrain": "FWD",
+      "msrpCAD": 27740,
+      "msrpNote": "before freight/PDI, fees and tax",
+      "fuelCityL100km": 4.4,
+      "fuelHwyL100km": 5.1,
+      "cargoL": 371,
+      "warrantyYears": 3,
+      "warrantyKm": 60000,
+      "pros": [
+        "4.4 city / 5.1 hwy L/100km on the base LE FWD — superb fuel figures",
+        "Toyota Safety Sense 3.0 plus blind-spot monitor and rear cross-traffic alert standard for 2026",
+        "Low $27,740 entry price for a hybrid"
+      ],
+      "cons": [
+        "Only 138 net hp — the slowest of the hybrids",
+        "Base LE rides on 16-inch steel wheels with covers and has a basic cabin",
+        "Base car is FWD only; AWD costs about $1,500 more"
+      ],
+      "features": [
+        "Toyota Safety Sense 3.0 (pre-collision, lane tracing assist, radar cruise, road sign assist)",
+        "8-inch Toyota Audio Multimedia with wireless Apple CarPlay and Android Auto",
+        "7-inch digital gauge cluster (new for 2026)",
+        "Heated front seats",
+        "LED headlights",
+        "60/40 split folding rear seats"
+      ],
+      "image": "assets/corolla-hybrid.jpg",
+      "officialUrl": "https://www.toyota.ca/corolla",
+      "msrpSource": "Auto123 Canadian press pricing report on the 2026 Corolla lineup, corroborated by Terrace Toyota (BC) dealer listing: 'Starting MSRP $27,740 (Corolla Hybrid LE)'"
+    },
+    {
+      "id": "honda-civic-hybrid",
+      "make": "Honda",
+      "model": "Civic Hybrid",
+      "trim": "Sport",
+      "year": 2026,
+      "bodyStyle": "sedan",
+      "seats": 5,
+      "powertrain": "hybrid",
+      "drivetrain": "FWD",
+      "msrpCAD": 34200,
+      "msrpNote": "before freight/PDI ($1,830), fees and tax",
+      "fuelCityL100km": 4.7,
+      "fuelHwyL100km": 5.1,
+      "cargoL": 419,
+      "warrantyYears": 3,
+      "warrantyKm": 60000,
+      "pros": [
+        "200 hp / 232 lb-ft — the quickest hybrid here",
+        "4.7 city / 5.1 hwy: near-Corolla economy with far more power",
+        "Refined, upscale driving feel; rated the segment's best all-rounder by Canadian reviewers"
+      ],
+      "cons": [
+        "$34,200 base — roughly $6,500 more than the Corolla Hybrid LE",
+        "Hybrid powertrain only offered on the top two trims",
+        "No AWD option at any trim"
+      ],
+      "features": [
+        "18-inch aluminum-alloy wheels",
+        "Power moonroof",
+        "Heated front seats and heated leather-wrapped steering wheel",
+        "7-inch Display Audio with Apple CarPlay and Android Auto",
+        "Honda Sensing suite (collision mitigation braking, adaptive cruise, blind spot information)",
+        "Remote engine start"
+      ],
+      "image": "assets/civic-hybrid.jpg",
+      "officialUrl": "https://www.honda.ca/en/civic_sedan",
+      "msrpSource": "Canadian dealer listing (Great Lakes Honda, Sault Ste. Marie) itemizing 'MSRP ($34,200.00)' plus freight/PDI $1,830 — Honda Canada publishes no public MSRP"
+    },
+    {
+      "id": "ford-maverick",
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "XL",
+      "year": 2026,
+      "bodyStyle": "truck",
+      "seats": 5,
+      "powertrain": "hybrid",
+      "drivetrain": "FWD",
+      "msrpCAD": 38195,
+      "msrpNote": "advertised starting price incl. freight/PDI under Ontario all-in pricing rules; + tax & licence",
+      "fuelCityL100km": 5.6,
+      "fuelHwyL100km": 6.8,
+      "cargoL": 943,
+      "warrantyYears": 3,
+      "warrantyKm": 60000,
+      "pros": [
+        "Standard 2.5L full-hybrid powertrain (FWD) — the most fuel-efficient pickup sold in Canada",
+        "4.5-ft FLEXBED: 943 L with 1,500-lb payload, multi-position tailgate and DIY-friendly bed slots",
+        "Standard 13.2-inch SYNC 4 touchscreen with wireless Apple CarPlay/Android Auto"
+      ],
+      "cons": [
+        "No heated front seats or heated steering wheel on the XL",
+        "Manually adjustable seats and mirrors, single-zone manual climate on the base trim",
+        "$38,195 base — the priciest vehicle on this site"
+      ],
+      "features": [
+        "2.5L full-hybrid powertrain with power-split eCVT, FWD standard",
+        "13.2-inch SYNC 4 touchscreen with wireless Apple CarPlay/Android Auto",
+        "8-inch digital instrument cluster",
+        "Ford Co-Pilot360 (pre-collision assist with automatic emergency braking, auto high-beams)",
+        "FLEXBED with six cargo tie-downs and multi-position locking tailgate",
+        "17-inch steel wheels with covers; rear view camera"
+      ],
+      "image": "assets/maverick.jpg",
+      "officialUrl": "https://www.ford.ca/trucks/maverick/compare-models/",
+      "msrpSource": "Ford Canada model-select page ('Starting At $38,195'), corroborated by Mohawk Ford (Hamilton, ON) advertised pricing"
+    }
+  ],
+  "channels": [
+    {
+      "desc": "Canada's biggest car marketplace. Search new and used by make, model, and postal code — the first place most Canadians shop.",
+      "name": "AutoTrader.ca",
+      "tag": "New & used listings",
+      "url": "https://www.autotrader.ca/"
+    },
+    {
+      "desc": "Listings plus deal ratings that flag whether a used price is fair, good, or overpriced. Great second opinion before you negotiate.",
+      "name": "CarGurus",
+      "tag": "Price analysis",
+      "url": "https://www.cargurus.ca/"
+    },
+    {
+      "desc": "Private-sale listings where patient buyers find the lowest prices. Always get an independent inspection first.",
+      "name": "Kijiji Autos",
+      "tag": "Private sellers",
+      "url": "https://www.kijiji.ca/"
+    },
+    {
+      "desc": "Buy a used car fully online in Ontario with a 10-day money-back guarantee and delivery to your door.",
+      "name": "Clutch",
+      "tag": "Online used",
+      "url": "https://www.clutch.ca/"
+    }
+  ],
+  "marketplaces": {
+    "autotrader": {
+      "homepage": "https://www.autotrader.ca/",
+      "pattern": "https://www.autotrader.ca/cars/{make}/{model}/",
+      "verified": true
+    },
+    "cargurus": {
+      "homepage": "https://www.cargurus.ca/",
+      "note": "CarGurus uses internal model IDs in search URLs — deep links not stable, homepage linked instead.",
+      "verified": false
+    },
+    "kijiji": {
+      "homepage": "https://www.kijiji.ca/",
+      "note": "Kijiji search URLs embed category/location IDs — homepage linked instead.",
+      "verified": false
+    }
+  },
+  "meta": {
+    "currency": "CAD",
+    "note": "Real cars sold in Canada. Prices are starting MSRPs in CAD, before freight/PDI, fees and tax — unless noted. Specs per Natural Resources Canada ratings and official brand pages. Verify before presenting or buying.",
+    "updated": "2026-10-12"
+  }
+}

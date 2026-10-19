@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Find your first car: filter real cars sold in Canada by budget, body style and powertrain, compare side by side, decode any VIN, and shop through real buying channels." />
+  <title>First-Time Car Buyer — Find Your First Car</title>
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="#top">First<span>Car</span>Finder</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#finder">Find Your Car</a>
+      <a href="#compare">Compare</a>
+      <a href="#vin">VIN Check</a>
+      <a href="#channels">Where to Buy</a>
+      <a href="#guide">Buying Guide</a>
+    </nav>
+    <a href="#finder" class="btn small nav-cta">Start</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Built for first-time buyers in Canada</span>
+        <h1>Your first car, <span class="accent">chosen with confidence.</span></h1>
+        <p class="lead">Answer four quick questions and we will match you with real cars sold in Canada — real prices, real specs, and real places to buy them. No guesswork, no fake listings.</p>
+        <div class="hero-actions">
+          <a href="#finder" class="btn">Find my car</a>
+          <a href="#vin" class="btn ghost">Decode a VIN</a>
+        </div>
+        <div class="hero-stats">
+          <div><b id="stat-cars">–</b><span>real cars tracked</span></div>
+          <div><b>2026</b><span>model-year data, verified</span></div>
+          <div><b>4</b><span>trusted buying channels</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/hero.jpg" alt="A car on the road at dusk" />
+        <div class="hero-badge">Starting MSRP from <b id="stat-lowest">–</b> in Canada</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINDER -->
+  <section class="block" id="finder">
+    <div class="wrap">
+      <span class="eyebrow">Step-by-step finder</span>
+      <h2 class="section-title">Four questions. Your shortlist.</h2>
+      <p class="section-sub">We score every car against your answers and show you exactly why each one matches. Change any answer and the ranking updates instantly.</p>
+
+      <div class="finder" id="finder-app">
+        <div class="finder-progress" id="finder-progress" aria-hidden="true">
+          <i class="done"></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="finder-body">
+
+          <!-- Step 1: budget -->
+          <div class="finder-step active" data-step="1">
+            <h3>What is your maximum budget?</h3>
+            <p class="hint">Think total before tax — we compare against the starting MSRP of each car.</p>
+            <div class="budget-readout"><b id="budget-value">$35,000</b><span>CAD max</span></div>
+            <input type="range" id="budget" min="20000" max="70000" step="1000" value="35000" aria-label="Maximum budget in Canadian dollars" />
+            <div class="budget-scale"><span>$20k</span><span>$35k</span><span>$50k</span><span>$70k</span></div>
+            <div class="budget-note">Tip: first-time buyers in Canada often land between $25k and $40k before tax. Leave room for insurance, which is higher for new drivers.</div>
+          </div>
+
+          <!-- Step 2: body + seats -->
+          <div class="finder-step" data-step="2">
+            <h3>What shape fits your life?</h3>
+            <p class="hint">Pick all that appeal to you — and how many seats you actually need.</p>
+            <div class="chip-group" id="body-chips" role="group" aria-label="Body style"></div>
+            <div class="field" style="margin-top:22px">
+              <label for="seats">Minimum seats</label>
+              <select id="seats">
+                <option value="2">2+ seats</option>
+                <option value="4">4+ seats</option>
+                <option value="5" selected>5+ seats</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 3: powertrain -->
+          <div class="finder-step" data-step="3">
+            <h3>Gas, hybrid, or electric?</h3>
+            <p class="hint">Pick a powertrain — or skip this step to see everything. EVs cost more up front but skip gas stations entirely.</p>
+            <div class="chip-group" id="power-chips" role="group" aria-label="Powertrain"></div>
+          </div>
+
+          <!-- Step 4: priority + commute -->
+          <div class="finder-step" data-step="4">
+            <h3>What matters most?</h3>
+            <p class="hint">Rank your top priority — we will weight the scores toward it.</p>
+            <div class="chip-group" id="priority-chips" role="group" aria-label="Top priority"></div>
+            <div class="field" style="margin-top:22px">
+              <label for="commute">Daily driving distance</label>
+              <input type="number" id="commute" value="40" min="0" max="500" />
+              <div class="suffix">km per day — used to estimate your yearly fuel cost on each result card.</div>
+            </div>
+          </div>
+
+          <!-- Step 5: results -->
+          <div class="finder-step" data-step="5">
+            <div class="results-head">
+              <h3>Your matches</h3>
+              <span class="results-count" id="results-count"></span>
+            </div>
+            <div class="car-grid" id="results"></div>
+          </div>
+
+          <div class="finder-nav">
+            <button class="btn ghost" id="finder-back">← Back</button>
+            <button class="btn" id="finder-next">Next →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-bar" id="compare-bar">
+        <span id="compare-label">Compare (0/3)</span>
+        <div class="slots" id="compare-slots"></div>
+        <button class="btn small" id="compare-go">Compare now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="block" id="compare" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">Side by side</span>
+      <h2 class="section-title">Compare up to three cars</h2>
+      <p class="section-sub">Add cars from your matches with the <b>+ Compare</b> button. Specs, prices and fuel costs line up in one table.</p>
+      <div class="compare-table-wrap" id="compare-wrap" hidden>
+        <table class="compare" id="compare-table"></table>
+      </div>
+      <p class="section-sub" id="compare-empty">Nothing to compare yet — your picks will appear here.</p>
+    </div>
+  </section>
+
+  <!-- VIN -->
+  <section class="block" id="vin" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">Transparency check</span>
+      <h2 class="section-title">Decode any VIN</h2>
+      <p class="section-sub">Paste a 17-character VIN from a listing, a dealer quote, or the dashboard plate. We decode the factory record so you can check it against what the seller claims.</p>
+      <div class="vin-panel">
+        <form class="vin-form" id="vin-form">
+          <input id="vin-input" maxlength="17" placeholder="e.g. 2HGFE2F59RH000000" aria-label="Vehicle Identification Number" autocomplete="off" spellcheck="false" />
+          <button class="btn" type="submit" id="vin-btn">Decode</button>
+        </form>
+        <div class="vin-result" id="vin-result"></div>
+        <p class="vin-note">Decoded live from the U.S. DOT NHTSA database — the same factory data behind every VIN. A decode confirms <b>what the car was built as</b>; it does not reveal accidents, liens, mileage rollbacks, or service history. For a used car, always pull a full history report and get an independent inspection before you buy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANNELS -->
+  <section class="block" id="channels" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">Real places to buy</span>
+      <h2 class="section-title">Where to actually buy it</h2>
+      <p class="section-sub">Every car on this site links to its official brand page plus Canada's biggest car marketplaces. No invented inventory — these are the real channels Canadians use.</p>
+      <div class="channel-grid" id="channel-grid"></div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="block" id="guide" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">First-timer playbook</span>
+      <h2 class="section-title">Buying your first car, step by step</h2>
+      <p class="section-sub">The short version of what experienced buyers wish they knew the first time.</p>
+      <div class="tips">
+        <div class="tip"><span class="n">1</span><h4>Set an out-the-door budget</h4><p>MSRP is just the start. Add freight, PDI, dealer fees, and 13% HST in Ontario — then get insurance quotes <b>before</b> you fall in love with a car.</p></div>
+        <div class="tip"><span class="n">2</span><h4>New vs. used is a math question</h4><p>A 3-year-old Civic or Corolla can save you thousands and still be reliable. Compare the used listing price against a new MSRP here first.</p></div>
+        <div class="tip"><span class="n">3</span><h4>Decode the VIN before you visit</h4><p>Make sure the trim, engine, and model year in the ad match the factory record. If they don't, walk away.</p></div>
+        <div class="tip"><span class="n">4</span><h4>Test-drive twice</h4><p>Once for the thrill, once for the boring stuff: parking, blind spots, rear seats, road noise at highway speed.</p></div>
+        <div class="tip"><span class="n">5</span><h4>Negotiate the out-the-door price</h4><p>Only one number matters: the total you pay to drive away. Get it in writing before you sign anything.</p></div>
+        <div class="tip"><span class="n">6</span><h4>Sleep on it</h4><p>A good deal today is still a good deal tomorrow. Pressure to "sign now" is a red flag, not a discount.</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- DETAIL MODAL -->
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <img id="modal-img" src="" alt="" />
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:var(--ink)">FirstCarFinder</b> — a course project framework for first-time car buyers in Canada.</div>
+    <details class="credits"><summary>Photo credits</summary><ul>
+        <li>2026 Honda Civic photo: <a href="https://commons.wikimedia.org/wiki/File%3A2022_Honda_Civic_LX_Sedan%2C_front_right%2C_11-02-2022.jpg" target="_blank" rel="noopener">MercurySable99</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Toyota Corolla photo: <a href="https://commons.wikimedia.org/wiki/File%3A2024_Toyota_Corolla_LE.jpg" target="_blank" rel="noopener">AnalyserOP</a>, CC BY 4.0, via Wikimedia Commons</li>
+        <li>2026 Mazda Mazda3 photo: <a href="https://commons.wikimedia.org/wiki/File%3A2024_Mazda3_%28BP%29_G20_Evolve_sedan%2C_Verdun%2C_South_Australia_2024-03-07.jpg" target="_blank" rel="noopener">RegionVisitor90</a>, CC0, via Wikimedia Commons</li>
+        <li>2026 Hyundai Elantra photo: <a href="https://commons.wikimedia.org/wiki/File%3A24_Hyundai_Elantra_N-Line.jpg" target="_blank" rel="noopener">HJUdall</a>, CC0, via Wikimedia Commons</li>
+        <li>2026 Kia K4 photo: <a href="https://commons.wikimedia.org/wiki/File%3A2025_Kia_K4_4DR_GT_Line_%28United_States%29_front_view_01.png" target="_blank" rel="noopener">Autosdeprimera</a>, CC BY 3.0, via Wikimedia Commons</li>
+        <li>2026 Volkswagen Jetta photo: <a href="https://commons.wikimedia.org/wiki/File%3AVOLKSWAGEN_JETTA_%28A7%29.jpg" target="_blank" rel="noopener">Mateusmatsuda</a>, CC BY 4.0, via Wikimedia Commons</li>
+        <li>2026 Subaru Crosstrek photo: <a href="https://commons.wikimedia.org/wiki/File%3ASUBARU_CROSSTREK_%28GU%29_China_%285%29.jpg" target="_blank" rel="noopener">Dinkun Chen</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Hyundai Kona photo: <a href="https://commons.wikimedia.org/wiki/File%3A2024_Hyundai_Kona_SEL%2C_front_right%2C_05-06-2024.jpg" target="_blank" rel="noopener">MercurySable99</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Honda HR-V photo: <a href="https://commons.wikimedia.org/wiki/File%3A2023_Honda_HR-V_LX_AWD%2C_front_right%2C_11-13-2022.jpg" target="_blank" rel="noopener">MercurySable99</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Toyota Corolla Cross photo: <a href="https://commons.wikimedia.org/wiki/File%3A2022_Toyota_Corolla_Cross_L_FWD%2C_Front_Left%2C_11-21-2021.jpg" target="_blank" rel="noopener">Elise240SX</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Tesla Model 3 photo: <a href="https://commons.wikimedia.org/wiki/File%3A2024_Tesla_Model_3_%2813103%29.jpg" target="_blank" rel="noopener">Calreyn88</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+      <li>2026 Honda Civic Hatchback photo: <a href="https://commons.wikimedia.org/wiki/File%3AHonda_Civic_XI_hatchback_001.jpg" target="_blank" rel="noopener">JustAnotherCarDesigner</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Mazda Mazda3 Sport photo: <a href="https://commons.wikimedia.org/wiki/File%3A%28SGP-Singapore%29_Showcar_Mazda3_Hatchback_No-plate_2024-09-14.jpg" target="_blank" rel="noopener">S5A-0043</a>, CC BY 4.0, via Wikimedia Commons</li>
+        <li>2026 Toyota GR86 photo: <a href="https://commons.wikimedia.org/wiki/File%3A2024_Toyota_GR86_-_white.jpg" target="_blank" rel="noopener">Ssu</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Toyota Corolla Hybrid photo: <a href="https://commons.wikimedia.org/wiki/File%3ATOYOTA_COROLLA_SEDAN_HYBRID_%28E210%29_China.jpg" target="_blank" rel="noopener">Dinkun Chen</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Honda Civic Hybrid photo: <a href="https://commons.wikimedia.org/wiki/File%3AHonda_Civic_FE4_2.0_RS_e-HEV_Ignite_Red_Metallic_-_front.jpg" target="_blank" rel="noopener">Ethan Llamas</a>, CC BY-SA 4.0, via Wikimedia Commons</li>
+        <li>2026 Ford Maverick photo: <a href="https://commons.wikimedia.org/wiki/File%3A2025_Ford_Maverick_au_SIAM_2025.jpg" target="_blank" rel="noopener">Bull-Doser</a>, Public domain, via Wikimedia Commons</li>
+      </ul><p>All vehicle photos are real photographs sourced via the Wikimedia Commons API. No AI-generated imagery is used on this site.</p></details>
+    <div>Prices are starting MSRPs in CAD, from official brand websites and verified dealer listings, before freight, fees, and tax. Always confirm with a dealer. Specs: Natural Resources Canada fuel-economy ratings. VIN data: U.S. DOT NHTSA.</div>
+    <div>Built as separate HTML / CSS / JS files — open <code>index.html</code> from any static server.</div>
+  </div>
+</footer>
+
+<script src="js/vin.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
