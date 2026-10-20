@@ -103,7 +103,11 @@ async function askClaude(apiKey, prompt) {
       messages: [{ role: "user", content: prompt }]
     })
   });
-  if (!res.ok || !data) throw new Error("upstream_failed");
+  if (!res.ok || !data) {
+    const err = new Error("upstream_failed");
+    err.status = res.status;
+    throw err;
+  }
   const text = Array.isArray(data.content)
     ? data.content.filter((b) => b && b.type === "text").map((b) => b.text).join("").trim()
     : "";
@@ -111,32 +115,47 @@ async function askClaude(apiKey, prompt) {
   return text;
 }
 
+const GEMINI_MODELS = ["gemini-2.5-flash", "gemini-3-flash-preview", "gemini-2.0-flash"];
+
 async function askGemini(apiKey, prompt) {
-  const { res, data } = await fetchJson(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-goog-api-key": apiKey
-      },
-      body: JSON.stringify({
-        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-        contents: [{ parts: [{ text: prompt }] }]
-      })
+  let lastStatus = null;
+  for (const model of GEMINI_MODELS) {
+    const { res, data } = await fetchJson(
+      "https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": apiKey
+        },
+        body: JSON.stringify({
+          system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+          contents: [{ parts: [{ text: prompt }] }]
+        })
+      }
+    );
+    if (res.ok && data) {
+      const parts =
+        data.candidates &&
+        data.candidates[0] &&
+        data.candidates[0].content &&
+        Array.isArray(data.candidates[0].content.parts)
+          ? data.candidates[0].content.parts
+          : [];
+      const text = parts.map((p) => (p && p.text) || "").join("").trim();
+      if (text) return text;
+      lastStatus = res.status;
+      break;
     }
-  );
-  if (!res.ok || !data) throw new Error("upstream_failed");
-  const parts =
-    data.candidates &&
-    data.candidates[0] &&
-    data.candidates[0].content &&
-    Array.isArray(data.candidates[0].content.parts)
-      ? data.candidates[0].content.parts
-      : [];
-  const text = parts.map((p) => (p && p.text) || "").join("").trim();
-  if (!text) throw new Error("upstream_failed");
-  return text;
+    lastStatus = res.status;
+    // 404 = this model name is not available to the key; try the next one.
+    // Any other status (400 key invalid, 403 not enabled, 429 quota) will
+    // fail the same way for every model, so stop and report it.
+    if (res.status !== 404) break;
+  }
+  const err = new Error("upstream_failed");
+  err.status = lastStatus;
+  throw err;
 }
 
 module.exports = async (req, res) => {
@@ -168,7 +187,14 @@ module.exports = async (req, res) => {
     const answer = await call();
     return res.status(200).json({ answer, provider });
   } catch (e) {
-    // Deliberately generic: never leak the key or the upstream error body.
-    return res.status(502).json({ error: "upstream_failed" });
+    // Never leak the key or the upstream error body — but the HTTP status
+    // alone is safe and is the difference between "key is wrong" (400),
+    // "API not enabled" (403) and "model not found" (404) when debugging.
+    console.error("ask upstream failed:", provider, e && e.status ? e.status : e);
+    return res.status(502).json({
+      error: "upstream_failed",
+      provider,
+      upstreamStatus: (e && e.status) || null
+    });
   }
 };
